@@ -56,4 +56,4 @@ See `AGENTS.md` for the data layout and development notes.
 
 ## License
 
-No license has been chosen yet.
+MIT. See `LICENSE`.
