@@ -103,3 +103,7 @@ Releases are built by the [BigWigs packager](https://github.com/BigWigsMods/pack
 - `.github/workflows/check.yml` runs `luac5.1 -p` on every push, which catches syntax that LuaJIT accepts but the game's Lua 5.1 rejects.
 
 Keep `CHANGELOG.md` current as features land.
+
+## Working on the repository
+
+`main` is protected: changes go through a pull request, the `Check` workflow (Lua 5.1 syntax check) must pass, and force-pushes and branch deletion are blocked. Branch, commit, open a PR, and merge once the check is green; merged branches are deleted automatically. Tags matching `v*` are protected, so only a repository admin can create one, and pushing one releases to CurseForge.
