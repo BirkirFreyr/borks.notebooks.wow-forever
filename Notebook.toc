@@ -5,7 +5,6 @@
 ## Version: @project-version@
 ## SavedVariables: NotebookDB
 ## SavedVariablesPerCharacter: NotebookCharDB
-# Once the CurseForge project exists, add its numeric ID here (see "Releasing" in AGENTS.md):
-# ## X-Curse-Project-ID: 000000
+## X-Curse-Project-ID: 1791122
 
 Notebook.lua

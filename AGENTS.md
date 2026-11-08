@@ -12,6 +12,7 @@ Notebook is a single-file WoW addon (Lua, no libraries) for the World of Warcraf
 - `Notebook.lua` - all code. Rough order: style constants and helpers, position helpers, data helpers, note window, list window, settings window, init and slash commands.
 - `README.md` - user documentation.
 - `AGENTS.md` - this file.
+- `assets/` - project artwork (`logo.svg` is the source, `logo.png` the 512x512 render used for the CurseForge project). Not included in the packaged addon.
 
 ## Saved variables
 
@@ -96,7 +97,7 @@ Releases are built by the [BigWigs packager](https://github.com/BigWigsMods/pack
 
 - `.pkgmeta` packages the addon as `Notebook/`, uses `CHANGELOG.md` as the changelog, and leaves out developer files (`AGENTS.md`, `README.md`, `.github`).
 - `Notebook.toc` has `## Version: @project-version@`, which the packager replaces with the tag name. In an unpackaged checkout the version therefore shows up literally as `@project-version@`; that is expected.
-- One-time setup: create the CurseForge project, put its numeric ID in `Notebook.toc` as `## X-Curse-Project-ID: <id>` (a commented placeholder is there), and add a repository secret named `CF_API_KEY` with a CurseForge API token. `GITHUB_TOKEN` is provided automatically.
+- One-time setup (done): the CurseForge project ID is in `Notebook.toc` as `## X-Curse-Project-ID`, and the repository needs a secret named `CF_API_KEY` containing a CurseForge API token. `GITHUB_TOKEN` is provided automatically.
 - To release: update `CHANGELOG.md` and the version-related docs, then push a tag (for example `v1.0.1`). The workflow uploads the package to CurseForge and creates a GitHub release.
 - The packager chooses the CurseForge game version from the `## Interface` number in the TOC. If CurseForge does not map `16001` to the Forever flavor on the first upload, fix the game version on the CurseForge file page, or pass the packager a game version explicitly (see its `-g` option).
 - `.github/workflows/check.yml` runs `luac5.1 -p` on every push, which catches syntax that LuaJIT accepts but the game's Lua 5.1 rejects.
