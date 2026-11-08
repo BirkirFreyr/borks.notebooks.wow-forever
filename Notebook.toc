@@ -1,0 +1,11 @@
+## Interface: 16001
+## Title: Notebook
+## Notes: Simple notes with a subject and body. Account-wide or character-specific.
+## Author: Borks
+## Version: @project-version@
+## SavedVariables: NotebookDB
+## SavedVariablesPerCharacter: NotebookCharDB
+# Once the CurseForge project exists, add its numeric ID here (see "Releasing" in AGENTS.md):
+# ## X-Curse-Project-ID: 000000
+
+Notebook.lua
