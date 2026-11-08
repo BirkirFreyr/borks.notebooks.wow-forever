@@ -106,4 +106,4 @@ Keep `CHANGELOG.md` current as features land.
 
 ## Working on the repository
 
-`main` is protected: changes go through a pull request, the `Check` workflow (Lua 5.1 syntax check) must pass, and force-pushes and branch deletion are blocked. Branch, commit, open a PR, and merge once the check is green; merged branches are deleted automatically. Tags matching `v*` are protected, so only a repository admin can create one, and pushing one releases to CurseForge.
+`main` and `release/v*` branches are protected: changes go through a pull request, the `Check` workflow (Lua 5.1 syntax check) must pass, and force-pushes and branch deletion are blocked. Branch, commit, open a PR, and merge once the check is green; merged branches are deleted automatically. Tags matching `v*` are protected, so only a repository admin can create one, and pushing one releases to CurseForge. The release workflow refuses a tag whose commit is not on `main` or a `release/v*` branch; use a `release/v<major>.<minor>` branch (for example `release/v1.0`) to backport or hotfix an older version without releasing what is on `main`.
