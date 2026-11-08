@@ -5,6 +5,9 @@ on:
     tags:
       - "**"
 
+permissions:
+  contents: write # lets the packager create the GitHub release
+
 jobs:
   release:
     runs-on: ubuntu-latest
